@@ -10,9 +10,9 @@ namespace SimpleInteraction.Forms
 		public static readonly BindableProperty SourceObjectProperty =
 			BindableProperty.Create("SourceObject", typeof(IInteractionRequest), typeof(InteractionRequestBehaviorBase), propertyChanged: OnSourceObjectChanged);
 
-		public INotificationRequest<EventArgs> NotificationRequest
+		public IInteractionRequest SourceObject
 		{
-			get => (INotificationRequest<EventArgs>)GetValue(SourceObjectProperty);
+			get => (IInteractionRequest)GetValue(SourceObjectProperty);
 			set => SetValue(SourceObjectProperty, value);
 		}
 
